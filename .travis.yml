@@ -1,0 +1,7 @@
+language: java
+script:
+  - mvn test
+deploy:
+  provider: heroku
+  api_key: sUiIxaHl_XW8NTnwRc7tOA
+  app: demo-ci-gina
