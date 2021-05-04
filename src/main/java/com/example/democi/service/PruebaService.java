@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 public class PruebaService {
 
     public double suma(double a,double b){
-        return a+b;
+        return a-b;
     }
 }

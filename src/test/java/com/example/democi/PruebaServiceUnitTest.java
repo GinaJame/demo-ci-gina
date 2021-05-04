@@ -12,6 +12,6 @@ public class PruebaServiceUnitTest extends DemoCiApplicationTests{
 
     @Test
     public void sumaTest(){
-        assertEquals(5.0,pruebaService.suma(2.0,5.0));
+        assertEquals(3.0,pruebaService.suma(5.0,2.0));
     }
 }

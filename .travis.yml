@@ -1,7 +1,19 @@
 language: java
-script:
-  - mvn test
-deploy:
-  provider: heroku
-  api_key: sUiIxaHl_XW8NTnwRc7tOA
-  app: demo-ci-gina
+jobs:
+  include:
+    - stage: Run tests
+      script : mvn test
+    - stage: Deploy staging
+      deploy:
+        provider: heroku
+        api_key: be919c28-9eda-477a-9eff-2bd74595da48
+        app: demo-ci-gina
+    - stage: Ping Staging
+      script: 'curl https://demo-ci-gina-staging.herokuapp.com/v1/prueba'
+    - stage: Deploy production
+      deploy:
+        provider: heroku
+        api_key: b8bd930b-3767-4fee-a617-d9c9c7aa44ce
+        app: demo-ci-calidad
+    - stage: Ping production
+      script: 'curl https://demo-ci-gina.herokuapp.com/v1/prueba'
