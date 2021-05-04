@@ -9,11 +9,11 @@ jobs:
         api_key: ad6c220d-e6e2-442a-bec1-2243f1e6fefc
         app: demo-ci-gina
     - stage: Ping Staging
-      script: 'curl https://demo-ci-gina-staging.herokuapp.com/v1/prueba'
+      script: 'curl https://demo-ci-gina.herokuapp.com/v1/prueba'
     - stage: Deploy production
       deploy:
         provider: heroku
         api_key: ad6c220d-e6e2-442a-bec1-2243f1e6fefc
         app: demo-ci-gina
     - stage: Ping production
-      script: 'curl https://demo-ci-gina.herokuapp.com/v1/prueba'
+      script: 'curl https://demo-ci-gina-production.herokuapp.com/v1/prueba'
