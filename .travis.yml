@@ -17,3 +17,5 @@ jobs:
         app: demo-ci-gina-production
     - stage: Ping production
       script: 'curl https://demo-ci-gina-production.herokuapp.com/v1/prueba'
+before_install:
+  - chmod +x mvnw
